@@ -1,8 +1,8 @@
-identifier: sh.cider.plugin-template-wip
-name: Example Plugin
-description: Shows off some of the working plugin API draft
-author: ciderapp
-repo: https://github.com/ciderapp/plugin-template-wip
+identifier: de.airsi.listenbrainz-plus
+name: ListenBrainz Plus
+description: Scrobble plays from Cider to ListenBrainz.
+author: airsi
+repo: https://github.com/airsi/cider-listenbrainz-plus-plugin
 entry:
   "plugin.js":
     type: main

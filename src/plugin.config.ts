@@ -5,13 +5,13 @@ export default {
     /**
      * Custom element prefix, must be unique
      */
-    ce_prefix: 'plugin-template',
-    identifier: 'org.username.plugin-template',
-    name: 'Cider Plugin Template',
-    description: 'A template for creating a Cider plugin.',
-    version: '0.0.1',
-    author: 'your_username',
-    repo: 'https://github.com/ciderapp/plugin-template',
+    ce_prefix: 'listenbrainz-plus',
+    identifier: 'de.airsi.listenbrainz-plus',
+    name: 'ListenBrainz Plus',
+    description: 'Scrobble plays from Cider to ListenBrainz.',
+    version: '1.0.0',
+    author: 'airsi',
+    repo: 'https://github.com/airsi/cider-listenbrainz-plus-plugin',
     entry: {
         'plugin.js': {
             type: 'main',

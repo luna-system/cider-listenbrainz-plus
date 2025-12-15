@@ -1,10 +1,12 @@
 {
-  "name": "plugin-template",
+  "name": "de.airsi.listenbrainz-plus",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vue-tsc -b && vite build && tsx ./scripts/prepare-plugin-folder.ts",
+    "deploy-dev": "tsx ./scripts/deploy-dev.ts",
     "preview": "vite preview",
     "prepare-marketplace": "tsx ./scripts/market-pack.cts",
     "update-pluginkit": "pnpm up @ciderapp/pluginkit"
@@ -13,6 +15,10 @@
     "@paralleldrive/cuid2": "^2.2.2",
     "lodash": "^4.17.21",
     "vue": "^3.5.13"
+  },
+  "plugin": {
+    "ce_prefix": "listenbrainz-plus",
+    "identifier": "de.airsi.listenbrainz-plus"
   },
   "devDependencies": {
     "@ciderapp/pluginkit": "github:ciderapp/pluginkit",
