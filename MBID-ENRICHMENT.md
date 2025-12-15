@@ -7,6 +7,7 @@ The plugin now automatically enriches scrobbles with **MusicBrainz IDs (MBIDs)**
 ## What are MBIDs?
 
 MBIDs are unique identifiers from the MusicBrainz database that identify:
+
 - **Recording MBID**: The specific recording/track
 - **Artist MBIDs**: The artists who performed the track
 - **Release MBID**: The album/release the track is from
@@ -15,23 +16,27 @@ MBIDs are unique identifiers from the MusicBrainz database that identify:
 ## How It Works
 
 ### 1. ISRC-Based Lookup (Primary Method)
+
 - Apple Music metadata often includes **ISRC codes** (International Standard Recording Code)
 - ISRCs are industry-standard identifiers that uniquely identify recordings
 - When available, we use ISRC to look up MBIDs from MusicBrainz
 - This is the most reliable method with near-perfect accuracy
 
 ### 2. Text-Based Search (Fallback)
+
 - If no ISRC is available, we search MusicBrainz by artist, track, and album names
 - Only accepts matches with 85%+ confidence score
 - Less reliable than ISRC but still useful
 
 ### 3. Caching Layer
+
 - All MBID lookups are cached in localStorage for 30 days
 - Cache prevents redundant API calls for tracks you've scrobbled before
 - Stores up to 1000 tracks (oldest entries automatically removed)
 - Even negative results (no MBIDs found) are cached to avoid repeated lookups
 
 ### 4. Rate Limiting
+
 - MusicBrainz API requires max 1 request per second
 - Built-in rate limiting ensures compliance
 - Lookups happen asynchronously and don't block scrobbling
@@ -41,6 +46,7 @@ MBIDs are unique identifiers from the MusicBrainz database that identify:
 ### Enriched Scrobble Data
 
 When MBIDs are found, scrobbles include:
+
 ```json
 {
   "track_metadata": {
@@ -63,6 +69,7 @@ When MBIDs are found, scrobbles include:
 ### Debug UI
 
 The **Advanced** page now shows:
+
 - **MBID Cache Statistics**: Number of cached tracks and cache age
 - **Clear Cache** button: Manually clear the cache if needed
 - **Log messages** show MBID lookup status:
@@ -88,6 +95,7 @@ The **Advanced** page now shows:
 ## API Compliance
 
 ### MusicBrainz API Requirements
+
 - **Rate Limit**: Max 1 request per second (enforced via throttling)
 - **User-Agent**: Set to `CiderListenBrainzPlus/1.0.0`
 - **Endpoints Used**:
@@ -105,11 +113,13 @@ The **Advanced** page now shows:
 ## Cache Management
 
 ### Automatic Cleanup
+
 - Entries older than 30 days are automatically removed
 - Cache limited to 1000 entries (oldest removed first)
 - Negative results are cached to avoid repeated failed lookups
 
 ### Manual Management
+
 - Visit **Advanced** page in plugin settings
 - View cache statistics (entry count and age)
 - Click **Clear Cache** to reset
@@ -131,27 +141,34 @@ The **Advanced** page now shows:
 ## Debugging
 
 ### Check ISRC Availability
+
 Open console and look for:
-```
+
+```text
 [ListenBrainz+] ISRC found: USRC12345678
 ```
 
 ### Monitor MBID Lookups
+
 Check logs in **Advanced** page:
+
 - `Looking up MBIDs` = Lookup in progress
 - `✓ Found MBIDs` = Success
 - `✗ No MBIDs found` = Not found in MusicBrainz
 - `MBIDs from cache` = Retrieved from cache (no API call)
 
 ### Verify Scrobbles Include MBIDs
+
 Look for `[+MBID]` indicator in queue messages:
-```
+
+```text
 Added to queue: Artist - Track [+MBID] (240s / 240s)
 ```
 
 ## Future Enhancements
 
 Potential improvements for future versions:
+
 - Batch MBID lookups for queue items
 - Pre-emptive MBID lookup when track changes (before scrobble threshold)
 - Export/import MBID cache

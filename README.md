@@ -48,7 +48,7 @@ Find your token in ListenBrainz under Account → Settings.
 
 Quick start:
 
-```
+```sh
 pnpm build && pnpm deploy-dev
 ```
 
@@ -69,7 +69,7 @@ pnpm build && pnpm deploy-dev
 
 Run:
 
-```
+```sh
 pnpm prepare-marketplace
 ```
 
