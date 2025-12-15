@@ -82,19 +82,6 @@ To configure this plugin, edit `src/plugin.config.ts`.
 - Scrobbling runs via a lightweight 2-second polling loop.
 - Errors from ListenBrainz are logged; playback continues unaffected.
 
-## Screenshots
-
-- Settings: token input and scrobbling toggles.
-- Advanced: status badges and MBIDs panel (dimmed when enrichment is off).
-- Status: queue/debug overview panel.
-
-Place PNGs in the `screenshots/` folder with names like:
-- `screenshots/settings.png`
-- `screenshots/advanced.png`
-- `screenshots/status-panel.png`
-
-Redact your ListenBrainz token before sharing.
-
 ### Preview
 
 ![Settings](screenshots/settings.png)
