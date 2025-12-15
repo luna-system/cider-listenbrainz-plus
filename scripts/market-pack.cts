@@ -2,6 +2,7 @@ import AdmZip from 'adm-zip';
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
 (async () => {
 
@@ -14,6 +15,10 @@ import { execSync } from 'child_process';
 
     // run npm run build
     execSync('npm run build');
+
+    // Resolve paths in ESM context
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
 
     // The file that will be sent to the marketplace
     const publishDir = path.resolve(__dirname, '../publish');

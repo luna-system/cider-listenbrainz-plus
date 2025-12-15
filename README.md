@@ -10,7 +10,7 @@ __This codebase was authored by humans with assistance from generative AI tools.
 
 -- human non-generated text begins --
 
-Hi! We're [luna \<luna@airsi.de\>](https://luna.neko.lgbt/)! We used generative AI to write this plugin. We do not know how to write plugins for Cider, we don't have the capability to relearn JS right now, we don't have a working knowledge of Typescript, and the Cider documentation isn't very robust at the moment. We might be learning Vue as part of this process, which is a cool bonus.
+Hi! We're [luna \<luna@airsi.de\>](https://luna.airsi.de/)! We used generative AI to write this plugin. We do not know how to write plugins for Cider, we don't have the capability to relearn JS right now, we don't have a working knowledge of Typescript, and the Cider documentation isn't very robust at the moment. We might be learning Vue as part of this process, which is a cool bonus.
 
 We had a specific task we wanted to accomplish as the year came to a close: a sort of Spotify Wrapped but handmade, because we don't use Spotify but we do scrobble our listens. Unfortunately, while working on a script to gather all 2025 releases that we listened to this year, we found that the Cider plugin we'd been using doesn't scrobble a MusicBrainz ID. If it did, however, then our year-in-music script would be a lot easier, and wouldn't require smashing the MusicBrainz API with thousands of metadata lookups all at once at the end of the year.
 
