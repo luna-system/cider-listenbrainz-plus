@@ -44,16 +44,6 @@ This plugin adds ListenBrainz scrobbling to Cider. While there are other similar
 
 Find your token in ListenBrainz under Account → Settings.
 
- 
-
-### Preview
-
-![Settings](screenshots/settings.png)
-
-![Advanced](screenshots/advanced.png)
-
-![Status Panel](screenshots/status-panel.png)
-
 ## Development
 
 Quick start:
