@@ -26,6 +26,7 @@ This plugin adds ListenBrainz scrobbling to Cider. While there are other similar
 - Where possible, all features are transparent in how they operate.
 - We make use of Cider's custom pages feature to add an "Advanced" page that gives transparent views of much of the processing done by this plugin's services
 - Logging and debug data are hidden and not rendered until you choose to make them visible, so there is no "log lag."
+- Scrobbles are locally queued to handle offline listening and failure resiliency (will retry scrobbles that fail)
 
 ### Planned UX Improvements
 
@@ -42,6 +43,19 @@ This plugin adds ListenBrainz scrobbling to Cider. While there are other similar
 - Enable scrobbling.
 
 Find your token in ListenBrainz under Account → Settings.
+
+## Screenshots
+
+- Settings: token input and scrobbling toggles.
+- Advanced: status badges and MBIDs panel (dimmed when enrichment is off).
+- Optional: debug logs visible on demand.
+
+Place PNGs in the `screenshots/` folder with names like:
+- `screenshots/settings.png`
+- `screenshots/advanced-status.png`
+- `screenshots/advanced-mbids.png`
+
+Redact your ListenBrainz token before sharing.
 
 ## Development
 
