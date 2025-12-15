@@ -44,18 +44,15 @@ This plugin adds ListenBrainz scrobbling to Cider. While there are other similar
 
 Find your token in ListenBrainz under Account → Settings.
 
-## Screenshots
+ 
 
-- Settings: token input and scrobbling toggles.
-- Advanced: status badges and MBIDs panel (dimmed when enrichment is off).
-- Optional: debug logs visible on demand.
+### Preview
 
-Place PNGs in the `screenshots/` folder with names like:
-- `screenshots/settings.png`
-- `screenshots/advanced-status.png`
-- `screenshots/advanced-mbids.png`
+![Settings](screenshots/settings.png)
 
-Redact your ListenBrainz token before sharing.
+![Advanced](screenshots/advanced.png)
+
+![Status Panel](screenshots/status-panel.png)
 
 ## Development
 
@@ -94,3 +91,24 @@ To configure this plugin, edit `src/plugin.config.ts`.
 
 - Scrobbling runs via a lightweight 2-second polling loop.
 - Errors from ListenBrainz are logged; playback continues unaffected.
+
+## Screenshots
+
+- Settings: token input and scrobbling toggles.
+- Advanced: status badges and MBIDs panel (dimmed when enrichment is off).
+- Status: queue/debug overview panel.
+
+Place PNGs in the `screenshots/` folder with names like:
+- `screenshots/settings.png`
+- `screenshots/advanced.png`
+- `screenshots/status-panel.png`
+
+Redact your ListenBrainz token before sharing.
+
+### Preview
+
+![Settings](screenshots/settings.png)
+
+![Advanced](screenshots/advanced.png)
+
+![Status Panel](screenshots/status-panel.png)
